@@ -2,7 +2,7 @@ module Blorgh
   class Article < ApplicationRecord
     attr_accessor :author_name
     has_many :comments
-    belongs_to :author, class_name: Blorg.author_class
+    belongs_to :author, class_name: Blorgh.author_class.to_s
 
     before_validation :set_author
 
